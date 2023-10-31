@@ -11,6 +11,7 @@
   <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
   <form th:action="@{/search/results}" method = "post">
+
     <h2>Search by:</h2>
 
     <p>
@@ -40,5 +41,14 @@
 
 </div>
 
+
+
+<table th:replace="list-jobs :: tableResults"></table>
+
+<!--<div th:replace="~{list-jobs :: tableResults}"></div>-->
+
+<!--    <table th:each="column : ${columns}">-->
+<!--        <tbody th:replace="list-jobs::tableResults"></tbody>-->
+<!--    </table>-->
 </body>
 </html>
